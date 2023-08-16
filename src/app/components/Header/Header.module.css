@@ -9,7 +9,7 @@
     height: 65px;
     width: 100%;
     background-color:rgba(14, 14, 14, 0.947);
-    border-bottom: 1px solid #1e1e1e ;
+    /* border-bottom: 1px solid #1e1e1e ; */
 }
 .inpc{
     margin-right: 70px;
@@ -187,13 +187,6 @@
     }
 }
 
-@media (max-width: 480px) {
-    .leftHeader img {
-        margin-top: 0px;
-        height: 83px; 
-        width: 70px;
-}
-}
 
 @media (max-width: 480px) {
     .leftHeader {
@@ -213,11 +206,11 @@
 }
 
 @media (max-width: 370px) {
-    .leftHeader img {
+    /* .leftHeader img {
         margin-top: 0px;
         height: 73px; 
         width: 60px;
-}
+} */
 }
 
 @media (max-width: 370px) {

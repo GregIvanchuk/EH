@@ -4,6 +4,7 @@ import styles from './Goods.module.css'
 import { useState } from 'react'
 import Good from './Good';
 import Categor from '../Categor';
+import Description from '../Description';
 export default function Goods() {
   let [isAdd, setIsAdd] = useState(true);
   let [isPress, setIsPress,] = useState(false);
@@ -25,10 +26,20 @@ export default function Goods() {
     <div className={styles.wrapper}>
     <Categor categories ={categories}  />
      <div className={styles.goods}>
-     <Good/>
-     <Good/> <Good/> <Good/> <Good/> <Good/> <Good/> <Good/> <Good/> <Good/> <Good/> <Good/> <Good/> <Good/>
+     <Good isPress={isPress} setIsPress={setIsPress}/>
+     <Good isPress={isPress} setIsPress={setIsPress}/>
+     <Good isPress={isPress} setIsPress={setIsPress}/>
+     <Good isPress={isPress} setIsPress={setIsPress}/>
+     <Good isPress={isPress} setIsPress={setIsPress}/>
+     <Good isPress={isPress} setIsPress={setIsPress}/>
+     <Good isPress={isPress} setIsPress={setIsPress}/>
+     <Good isPress={isPress} setIsPress={setIsPress}/>
+    
      </div>
+     {isPress ?
+     <Description isPress={isPress} setIsPress={setIsPress}/> : null
+      }
      </div>
-   
+     
   )
 }

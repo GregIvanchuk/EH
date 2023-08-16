@@ -8,7 +8,7 @@
     background-color: rgb(15, 15, 15);
     flex-shrink: 0;
     z-index: 11;
-    border-top: 1px solid #292929 ;
+    /* border-top: 1px solid #292929 ; */
     margin-top: 40px;
     padding-top: 10px;
     padding-bottom: 10px;

@@ -2,24 +2,18 @@
 import Image from 'next/image'
 import styles from './Good.module.css'
 import { useState } from 'react'
-export default function Good() {
-  let [isAdd, setIsAdd] = useState(true);
-  let [isPress, setIsPress,] = useState(false);
-  let clickAddCard = () => {
-      setIsAdd(!isAdd);
-      if (isAdd == false) onPlus({urlImg,title,company, price, id,count})
-  };
-  let pressAddFav = () => {
-      setIsPress(!isPress);
-      if (isPress == false) onHeart({urlImg,title,company, price, id})
-  }
-  let pressAddDescr = (id) => {
-      openDescr();
-      onDescr(id);
-  }
+export default function Good({isPress, setIsPress}) {
+//   let pressAddFav = () => {
+//       setIsPress(!isPress);
+//       if (isPress == false) onHeart({urlImg,title,company, price, id})
+//   }
+//   let pressAddDescr = (id) => {
+//       openDescr();
+//       onDescr(id);
+//   }
   return (
       <div className={styles.goodItem}>
-      <Image className={styles.descr} height={30} width={30} src={"/descr.png"} alt='jk'/>
+      <Image onClick={() => setIsPress(!isPress)} className={styles.descr} height={30} width={30} src={"/descr.png"} alt='jk'/>
       <div className={styles.contImg}>
                <Image height={170} width={170} src={"/good8.jpg"} alt='jk'/>
                </div>
