@@ -6,7 +6,7 @@ function Categor ({categories}) {
 return(
     <>
       <ul className={(pathName == "/") ? styles.categories : styles.categories2 }>
-      {/* <li  className={styles.active}>Тест</li> */}
+      <li  className={styles.active}>Тест</li>
 {categories.map((value,i) => <li key={i}  className={styles.categories_Item}>{value}</li>)}
       </ul>
        </>

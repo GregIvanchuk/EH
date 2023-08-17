@@ -5,7 +5,7 @@
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
-    gap: 0px;
+    gap: 10px;
   }
   .categories2{
     margin: 0 auto;
@@ -19,13 +19,21 @@
     font-size: 15px;
     cursor: pointer;
     /* border-radius: 5px; */
-    padding: 8px;
+    padding: 10px;
     text-align: center;
     background-color: rgba(15, 15, 15, 0.856);
     color: #ffffff;
     text-decoration: none;
     list-style: none;
     border: 1px solid rgb(40, 40, 40);
+  }
+  @media(max-width:565px){
+    .categories_Item{
+      padding: 8px;
+    }
+    .categories{
+      gap: 0px;
+    }
   }
   .active{
     font-size: 15px;
