@@ -15,10 +15,9 @@ export default function Good({isPress, setIsPress}) {
       <div className={styles.goodItem}>
       <Image onClick={() => setIsPress(!isPress)} className={styles.descr} height={30} width={30} src={"/descr.png"} alt='jk'/>
       <div className={styles.contImg}>
-               <Image height={170} width={170} src={"/good8.jpg"} alt='jk'/>
+               <Image height={170} width={170} src={"/shopping.webp"} alt='jk'/>
                </div>
-               <p className={styles.title}>Протеїн 1 кг </p>
-               <p className={styles.brand}>Optimum Nutrition</p>
+               <p className={styles.title}>Протеїн 1 кг Optimum Nutrition</p>
                <div className={styles.goodFooter}>
                <p className={styles.price}>1999 ₴</p>
                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">

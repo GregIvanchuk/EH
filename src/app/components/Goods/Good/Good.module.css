@@ -22,6 +22,8 @@
     height: 200px;
   }
   .title,.brand{
+    margin-top: 10px;
+    text-align: center;
     color: #000;
     font-weight: 500;
     font-size: 18px;
@@ -36,9 +38,12 @@
     font-size: 20px;
     color: #000;
   }
+  .hv{
+    color: #03be13;
+}
   .goodFooter{
-    margin-top: 20px;
-    margin-bottom: 10px;
+    position: absolute;
+    bottom: 15px;
     display:flex ;
     align-items: center;
     gap: 80px;
@@ -51,7 +56,7 @@
   @media (max-width: 565px) {
    .goodItem {
     width: 170px;
-    height: 250px;
+    height: 260px;
    }
     .title,.brand{
       color: #000;
@@ -67,8 +72,8 @@
       color: #000;
     }
     .goodFooter{
-      margin-top: 5px;
-      margin-bottom: 10px;
+      position: absolute;
+      bottom: 5px;
       display:flex ;
       align-items: center;
       gap: 50px;
@@ -82,25 +87,25 @@
   @media (max-width: 542px) {
     .goodItem {
       width: 220px;
-      height: 250px;
+      height: 260px;
      }
   }
   @media (max-width: 478px) {
     .goodItem {
       width: 200px;
-      height: 250px;
+      height: 260px;
      }
   }
   @media (max-width: 440px) {
     .goodItem {
       width: 180px;
-      height: 250px;
+      height: 260px;
      }
   }
   @media (max-width: 400px) {
     .goodItem {
       width: 170px;
-      height: 250px;
+      height: 260px;
      }
   }
    .contImg {

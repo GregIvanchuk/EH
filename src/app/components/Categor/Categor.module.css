@@ -1,11 +1,11 @@
 .categories{
     margin-left: 10px;
-    margin-right: 0px;
+    margin-right: 10px;
     max-width:  1000px;
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 0px;
   }
   .categories2{
     margin: 0 auto;

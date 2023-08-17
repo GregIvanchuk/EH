@@ -26,15 +26,16 @@ export default function Goods() {
     <div className={styles.wrapper}>
     <Categor categories ={categories}  />
      <div className={styles.goods}>
-     <Good isPress={isPress} setIsPress={setIsPress}/>
-     <Good isPress={isPress} setIsPress={setIsPress}/>
-     <Good isPress={isPress} setIsPress={setIsPress}/>
-     <Good isPress={isPress} setIsPress={setIsPress}/>
-     <Good isPress={isPress} setIsPress={setIsPress}/>
-     <Good isPress={isPress} setIsPress={setIsPress}/>
-     <Good isPress={isPress} setIsPress={setIsPress}/>
-     <Good isPress={isPress} setIsPress={setIsPress}/>
-    
+     <Good isPress={isPress} setIsPress={setIsPress}/>   
+     <Good isPress={isPress} setIsPress={setIsPress}/>   
+     <Good isPress={isPress} setIsPress={setIsPress}/>   
+     <Good isPress={isPress} setIsPress={setIsPress}/>   
+     <Good isPress={isPress} setIsPress={setIsPress}/>   
+     <Good isPress={isPress} setIsPress={setIsPress}/>   
+     <Good isPress={isPress} setIsPress={setIsPress}/>   
+     <Good isPress={isPress} setIsPress={setIsPress}/>   
+     <Good isPress={isPress} setIsPress={setIsPress}/>   
+     <Good isPress={isPress} setIsPress={setIsPress}/>    
      </div>
      {isPress ?
      <Description isPress={isPress} setIsPress={setIsPress}/> : null
