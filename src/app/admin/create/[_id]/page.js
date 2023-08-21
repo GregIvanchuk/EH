@@ -4,7 +4,7 @@ import { useForm } from 'react-hook-form';
 import { usePathname } from 'next/navigation'
 import { useState } from 'react';
 import axios from '../../../axios';
-import styles from './Create.module.css';
+import styles from './create.module.css';
 import HeaderAdmin from '@/app/components/HeaderAdmin';
 function Create(props) {
   const pathname = usePathname()
