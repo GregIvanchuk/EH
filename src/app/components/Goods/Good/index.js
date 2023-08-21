@@ -1,29 +1,54 @@
 "use client"
 import Image from 'next/image'
 import styles from './Good.module.css'
-import { useState } from 'react'
-export default function Good({isPress, setIsPress}) {
+import { usePathname } from 'next/navigation'
+import { useSelector,useDispatch } from "react-redux";
+import Link from 'next/link';
+import { useState,useEffect } from 'react';
+import {addCartItems} from '@/app/Redux/cartSlice';
+import { fetchRemoveGoods } from '@/app/Redux/goodsSlice';
+export default function Good({isPress, setIsPress, setIdf, good}) {
+  const cartItems  = useSelector(state => state.cart.cartItems)
+  // const [isClicked,setIsClicked] = useState(false);
+  const cartItem   = useSelector (state => state.cart.cartItems.find((obj) => obj._id === good._id ))
+  const pathname = usePathname();
+  const isEditing = (pathname == "/" ) ? true : false  ;
 //   let pressAddFav = () => {
 //       setIsPress(!isPress);
 //       if (isPress == false) onHeart({urlImg,title,company, price, id})
 //   }
-//   let pressAddDescr = (id) => {
-//       openDescr();
-//       onDescr(id);
-//   }
+const pressAddDescr = (_id) => {
+  setIdf(_id);
+  setIsPress(!isPress)
+}
+const dispatch  = useDispatch(); 
+// const addCart = (obj) =>{
+//   setIsClicked(!isClicked);
+//   dispatch(addCartItems(obj))
+// }
+const removeGood = () => {
+  const confirmed = myConfirm("Ви впевнені, що хочете видалити товар?");
+  if (confirmed) {
+    console.log(_id)
+   dispatch(fetchRemoveGoods(_id));
+  }
+};
   return (
       <div className={styles.goodItem}>
-      <Image onClick={() => setIsPress(!isPress)} className={styles.descr} height={30} width={30} src={"/descr.png"} alt='jk'/>
+         { isEditing ? null :
+   <div className={styles.editItems}>
+                  <Image onClick={removeGood}  width={50} height={50} className={styles.delete} src="/trashBox.png" alt="jjk" />
+                  <Link href={`/admin/create/${good._id}`}> <Image width={50} height={50} className={styles.edit} src="/edit.png" alt="hjh" /></Link>
+                  </div>
+                  }
+      {/* <Image  className={styles.descr} height={30} width={30} src={"/descr.png"} alt='jk'/> */}
       <div className={styles.contImg}>
-               <Image height={170} width={170} src={"/shopping.webp"} alt='jk'/>
+               <Image height={170} width={170} src={good.imgmain} alt='jk'/>
                </div>
-               <p className={styles.title}>Протеїн 1 кг Optimum Nutrition</p>
+               <p className={styles.title}>{good.title}</p>
                <div className={styles.goodFooter}>
-               <p className={styles.price}>1999 ₴</p>
-               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-  <path d="M12 2c0.3 0 0.5 0.2 0.5 0.5v8.5h8.5c0.3 0 0.5 0.2 0.5 0.5s-0.2 0.5-0.5 0.5h-8.5v8.5c0 0.3-0.2 0.5-0.5 0.5s-0.5-0.2-0.5-0.5v-8.5h-8.5c-0.3 0-0.5-0.2-0.5-0.5s0.2-0.5 0.5-0.5h8.5v-8.5c0-0.3 0.2-0.5 0.5-0.5z"/>
-</svg>
-
+               <p className={styles.price}>{good.price} ₴</p>
+                <Image onClick={() => pressAddDescr(good._id) } height={30} width={30} src={"/addGood2.png"} alt='jk'/>
                </div>
             </div>
    

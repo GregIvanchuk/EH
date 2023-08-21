@@ -1,13 +1,12 @@
 import React from "react";
 import styles from "./Categor.module.css";
 import { usePathname } from 'next/navigation'
-function Categor ({categories}) { 
+function Categor ({catId,OnclickCatIndex,categories}) { 
  const pathName = usePathname();
 return(
     <>
       <ul className={(pathName == "/") ? styles.categories : styles.categories2 }>
-      <li  className={styles.active}>Тест</li>
-{categories.map((value,i) => <li key={i}  className={styles.categories_Item}>{value}</li>)}
+      {categories.map((value,i) => <li key={i} onClick={()=>OnclickCatIndex(i)}  className={catId == i ? styles.active : styles.categories_Item}>{value}</li>)}
       </ul>
        </>
          )}

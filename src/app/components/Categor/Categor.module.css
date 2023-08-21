@@ -21,29 +21,35 @@
     /* border-radius: 5px; */
     padding: 10px;
     text-align: center;
+    color: #565656;
     background-color: rgba(15, 15, 15, 0.856);
-    color: #ffffff;
     text-decoration: none;
     list-style: none;
     border: 1px solid rgb(40, 40, 40);
-  }
-  @media(max-width:565px){
-    .categories_Item{
-      padding: 8px;
-    }
-    .categories{
-      gap: 0px;
-    }
+    border-radius: 5px;
   }
   .active{
     font-size: 15px;
     cursor: pointer;
     text-align: center;
-    padding: 8px;
+    padding: 10px;
     background-color: rgb(0, 0, 0);
-    color: #565656;
+    color: #ffffff;
     text-decoration: none;
     list-style: none;
     border: 1px solid rgb(61, 61, 61);
+    border-radius: 5px;
   }
+  @media(max-width:565px){
+    .categories_Item{
+      padding: 8px;
+    }
+    /* .categories{
+      gap: 0px;
+    } */
+    .active{
+      padding: 8px;
+    }
+  }
+  
   
