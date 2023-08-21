@@ -10,7 +10,7 @@ function EmptyCart() {
         </div>
         <span>Скоріш за все ви ще не робили замовлення.</span>
         <span> Для здійснення замовлення поверніться на головну сторінку.</span>
-        <img height={300} width={280} src="/cart.png" />
+        <Image height={300} width={280} src="/cart.png" alt="img" />
         <Link href="/">
         <button>НAЗАД</button>
         </Link>

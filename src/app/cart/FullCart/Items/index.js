@@ -9,7 +9,7 @@ function Item({_id,imgmain,price,title,typeid,sizes,type}) {
   return (
             <div className={styles.cart_item}>
               <div className={styles.descr}>
-              <div className={styles.mainimg}><img width={50} height={50} src={imgmain} alt="icon" /></div>
+              <div className={styles.mainimg}><Image width={50} height={50} src={imgmain} alt="icon" /></div>
               <div className={styles.title_inner_cart}>
                 <h3>{title}</h3>
               </div>
@@ -22,7 +22,7 @@ function Item({_id,imgmain,price,title,typeid,sizes,type}) {
               </div>
               <div className={styles.price}>{(price * addedCount)}₴</div>
               </div>
-              <img onClick={() => dispatch(removeItem({_id}))} className={styles.del_cart} width={20} height={20} src="/close.png" alt="" />
+              <Image onClick={() => dispatch(removeItem({_id}))} className={styles.del_cart} width={20} height={20} src="/close.png" alt="icon" />
             </div>
   );
 }

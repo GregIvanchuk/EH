@@ -32,7 +32,7 @@ function Slider() {
     return (
             <div  className={styles.sliderStyles}>
                     <div  className={styles.slideStyles} >
-                          <img  src={slides[currentIndex].src}/> 
+                          <img  src={slides[currentIndex].src} alt='img'/> 
                         {/* <div className={styles.leftArrowStyles} onClick={goToPrevios}>
                           <img height={22} width={22} src="/images/rarrow.png"  alt="" />
                           </div> */}

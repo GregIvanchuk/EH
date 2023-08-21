@@ -23,7 +23,7 @@ function Header() {
             </div>
         </div>
         <div className={styles.inpc}>
-<svg  className={styles.zoom}  xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
+<svg alt="img"  className={styles.zoom}  xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
   <path d="M10 2a8 8 0 1 0 8 8 8 8 0 0 0-8-8zm0 14a6 6 0 1 1 6-6 6 6 0 0 1-6 6zm10.71 2.29l-2.5-2.5a1 1 0 1 0-1.42 1.42l2.5 2.5a1 1 0 0 0 1.42-1.42z" fill="white"/>
 </svg>
         <input onChange={(event) => dispatch(setInputValue(event.target.value))} value={inputValue} placeholder=" пошук..." className={styles.input} type="text" />

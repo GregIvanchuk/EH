@@ -19,7 +19,7 @@ export default function Home() {
       { 
       isLoading ?
       <div className={styles.preloadContainer}>
-      <Image className={styles.logoPreload} width={300} height={300} src="/logo.svg"/>
+      <Image className={styles.logoPreload} width={300} height={300} src="/logo.svg" alt='logo'/>
       </div> :
       <>
       <Header/>
