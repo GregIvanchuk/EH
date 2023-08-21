@@ -7,7 +7,7 @@ import { fetchAuthMe } from '../Redux/auth';
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from 'react';
 
-function admin() {
+function Admin() {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchAuthMe())
@@ -21,4 +21,4 @@ function admin() {
       );
 }
 
-export default admin;
+export default Admin;

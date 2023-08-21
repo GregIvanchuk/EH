@@ -1,5 +1,6 @@
 import styles from "./FramedCart.module.css";
 import Link from "next/link";
+import Image from "next/image";
 function FramedCart() {
     return (
         <div className={styles.drawer}>

@@ -3,6 +3,7 @@ import Item from "./Items";
 import { useSelector, useDispatch } from "react-redux";
 import { clearItems } from "@/app/Redux/cartSlice";
 import Link from "next/link";
+import Image from "next/image";
 function FullCart() {
     const cartItems = useSelector((state) => state.cart.cartItems);
     const totalCount = useSelector((state) => state.cart.totalCount);

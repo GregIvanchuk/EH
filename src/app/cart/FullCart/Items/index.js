@@ -1,6 +1,7 @@
 import styles from './Item.module.css';
 import {removeItem,addCartItems,increment,decrement} from "../../../Redux/cartSlice";
 import { useSelector,useDispatch } from "react-redux";
+import Image from 'next/image';
 function Item({_id,imgmain,price,title,typeid,sizes,type}) {
     const dispatch = useDispatch();
     const cartItems = useSelector (state => state.cart.cartItems)

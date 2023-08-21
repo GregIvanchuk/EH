@@ -2,12 +2,13 @@
 import React, { useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import { usePathname } from 'next/navigation'
+import { useState } from 'react';
 import axios from '../../../axios';
-import styles from './create.module.css';
+import styles from './Create.module.css';
 import HeaderAdmin from '@/app/components/HeaderAdmin';
-function create(props) {
+function Create(props) {
   const pathname = usePathname()
-  const [imgUrl, setImgUrl] =  React.useState("");
+  const [imgUrl, setImgUrl] = useState("");
   // const [imgUrl2, setImgUrl2] =  React.useState("");
   // const [imgUrl3, setImgUrl3] =  React.useState("");
   function extractRestOfString(inputString, delimiter) {
@@ -163,4 +164,4 @@ function create(props) {
   );
 }
 
-export default  create;
+export default  Create;
