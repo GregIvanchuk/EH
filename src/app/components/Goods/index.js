@@ -48,8 +48,7 @@ scrollTo({ top: 0, behavior: 'smooth' }); // Вгору сторінки з пл
   return (
     <div className={styles.wrapper}>
       <Categor categories ={categories} catId={catId} OnclickCatIndex={(id) => dispatch(getCatId(id))}/>
-     <div className={styles.goods}>
-     {/* isLoading ? ar.map(( _ , index) => <MyLoader key={index}/>): */}
+     {/* <div className={styles.goods}>
      {
          isLoading ? <Image className={styles.loader} width={500} height={300} src="/Loading.gif" alt='gif'/>:
     inputValued ? 
@@ -64,7 +63,7 @@ scrollTo({ top: 0, behavior: 'smooth' }); // Вгору сторінки з пл
  .map((item,index)=> <Good isPress={isPress} setIsPress={setIsPress} setIdf={setIdf}  callback={(idt)=> pullOut(idt)}  key={index}  good={...item}/>)
    )
   }    
-     </div>
+     </div> */}
      <ReactPaginate
           previousLabel={'←'}
           nextLabel={'→'}
