@@ -45,17 +45,6 @@ scrollTo({ top: 0, behavior: 'smooth' }); // Вгору сторінки з пл
          const handlePageClick = ({ selected }) => {
           setCurrentPage(selected);
         };
-      //   <ReactPaginate
-      //   previousLabel={'←'}
-      //   nextLabel={'→'}
-      //   breakLabel={'...'}
-      //   pageCount={Math.ceil(goods.length / goodsPerPage)}
-      //   marginPagesDisplayed={0}
-      //   pageRangeDisplayed={0}
-      //   onPageChange={handlePageClick}
-      //   containerClassName={styles.pagination}
-      //   activeClassName={styles.active}
-      // />
   return (
     <div className={styles.wrapper}>
       <Categor categories ={categories} catId={catId} OnclickCatIndex={(id) => dispatch(getCatId(id))}/>
