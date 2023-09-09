@@ -27,11 +27,8 @@ const dispatch  = useDispatch();
 //   dispatch(addCartItems(obj))
 // }
 const removeGood = (_id) => {
-  const confirmed = confirm("Ви впевнені, що хочете видалити товар?");
-  if (confirmed) {
     console.log(_id)
    dispatch(fetchRemoveGoods(_id));
-  }
 };
   return (
       <div className={styles.goodItem}>
