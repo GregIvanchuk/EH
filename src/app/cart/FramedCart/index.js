@@ -8,7 +8,7 @@ function FramedCart() {
         <div className={styles.empty_title}>
           <h2>Ваше замовлення прийнято !</h2>
         </div>
-        <span>Найблищим часом ми з вами зв'яжемось</span>
+        <span>Найблищим часом ми з вами зв&apos;яжемось</span>
         <Image className={styles.frimg} height={100} width={100} src="/framed.gif" alt="img"/>
         <Link href="/">
         <button> НАЗАД</button>
