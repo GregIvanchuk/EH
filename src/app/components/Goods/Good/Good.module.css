@@ -1,14 +1,14 @@
 .goodItem {
     position: relative;
-    background-color: rgb(255, 255, 255);
+    /* background-color: rgb(20, 20, 20); */
+    background-color: rgb(18, 18, 18);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     width: 250px;
     height: 280px;
-    border: none;
-    border:  1px white solid;
+    /* border:  1px solid rgb(26, 26, 26); */
     transition: box-shadow 0.2s ease-in-out, transform 0.2s ease ;
     cursor: pointer;
   }
@@ -23,7 +23,7 @@
   .title,.brand{
     margin-top: 10px;
     text-align: center;
-    color: #000;
+    color: white;
     font-weight: 500;
     font-size: 17px;
   }
@@ -33,9 +33,15 @@
     font-size: 18px;
   }
   .price {
+    padding: 3px;
+    /* background-color: #e2e2e2; */
     font-weight: 700;
     font-size: 19px;
-    color: #000;
+    color: #ffffff;
+    /* border: 1px solid rgb(47, 47, 47); */
+  }
+  .pressAddDescr{
+    filter: invert(2);
   }
   .hv{
     color: #03be13;
@@ -48,6 +54,7 @@
     gap: 80px;
   }
   .descr{
+    color: white;
     position: absolute;
     top: 5px;
     right: 5px;
@@ -58,7 +65,6 @@
     height: 270px;
    }
     .title,.brand{
-      color: #000;
       font-weight: 500;
       font-size: 15px;
     }
@@ -68,7 +74,6 @@
     }
     .price {
       font-size: 17px;
-      color: #000;
     }
     .goodFooter{
       position: absolute;

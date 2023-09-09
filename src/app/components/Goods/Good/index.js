@@ -26,8 +26,8 @@ const dispatch  = useDispatch();
 //   setIsClicked(!isClicked);
 //   dispatch(addCartItems(obj))
 // }
-const removeGood = () => {
-  const confirmed = myConfirm("Ви впевнені, що хочете видалити товар?");
+const removeGood = (_id) => {
+  const confirmed = confirm("Ви впевнені, що хочете видалити товар?");
   if (confirmed) {
     console.log(_id)
    dispatch(fetchRemoveGoods(_id));
@@ -37,7 +37,7 @@ const removeGood = () => {
       <div className={styles.goodItem}>
          { isEditing ? null :
    <div className={styles.editItems}>
-                  <Image onClick={removeGood}  width={50} height={50} className={styles.delete} src="/trashBox.png" alt="jjk" />
+                  <Image onClick={() => removeGood(good._id)}  width={50} height={50} className={styles.delete} src="/trashBox.png" alt="jjk" />
                   <Link href={`/admin/create/${good._id}`}> <Image width={50} height={50} className={styles.edit} src="/edit.png" alt="hjh" /></Link>
                   </div>
                   }
@@ -48,7 +48,7 @@ const removeGood = () => {
                <p className={styles.title}>{good.title}</p>
                <div className={styles.goodFooter}>
                <p className={styles.price}>{good.price} ₴</p>
-                <Image onClick={() => pressAddDescr(good._id) } height={30} width={30} src={"/addGood2.png"} alt='jk'/>
+                <Image className={styles.pressAddDescr} onClick={() => pressAddDescr(good._id) } height={30} width={30} src={"/addGood2.png"} alt='jk'/>
                </div>
             </div>
    
