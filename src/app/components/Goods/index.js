@@ -29,9 +29,9 @@ export default function Goods() {
   useEffect(() => {
     dispatch(fetchGoods())
   }, []);
-//   useEffect(() => {
-// scrollTo({ top: 0, behavior: 'smooth' }); // Вгору сторінки з плавністю
-//   }, [currentPage]);
+  useEffect(() => {
+scrollTo({ top: 0, behavior: 'smooth' }); // Вгору сторінки з плавністю
+  }, [currentPage]);
   console.log(goods);
   const categories = ["Все","Протеїн","Гейнер","Креатин","Амінокислоти","Вітаміни","Омега-3","Інше"]
   const ar = [1,2,3,4,5,6,7,8]
