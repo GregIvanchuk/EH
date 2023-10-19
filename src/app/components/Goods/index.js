@@ -33,7 +33,7 @@ export default function Goods() {
 scrollTo({ top: 0, behavior: 'smooth' }); // Вгору сторінки з плавністю
   }, [currentPage]);
   console.log(goods);
-  const categories = ["Все","Протеїн","Гейнер","Креатин","Амінокислоти","Вітаміни","Омега-3","Інше"]
+  const categories = ["Bce","Протеїн","Гейнер","Креатин","Амінокислоти","Вітаміни","Омега-3","Інше"]
   const ar = [1,2,3,4,5,6,7,8]
   const startIndex = currentPage * goodsPerPage;
   const endIndex = startIndex + goodsPerPage;
@@ -110,7 +110,6 @@ scrollTo({ top: 0, behavior: 'smooth' }); // Вгору сторінки з пл
     )
   )
 }
-
      </div>
      <ReactPaginate
           previousLabel={'←'}
