@@ -1,4 +1,4 @@
-"use client"
+// "use client"
 import Image from 'next/image'
 import styles from './Goods.module.css'
 import { useState } from 'react'
@@ -53,35 +53,35 @@ scrollTo({ top: 0, behavior: 'smooth' }); // Вгору сторінки з пл
   isLoading ? ( // Якщо isLoading === true
     <Image className={styles.loader} width={500} height={300} src="/Loading.gif" alt='gif' />
   ) : (
-    inputValued ? ( // Якщо inputValued === true
-      (catId == 0) ? (
-        filtredGoods.map((item, index) => (
-          <Good
-            isPress={isPress}
-            setIsPress={setIsPress}
-            setIdf={setIdf}
-            callback2={(idd) => pullOut(idd)}
-            callback={(idt) => pullOut(idt)}
-            key={index}
-            good={...item}
-          />
-        ))
-      ) : (
-        filtredGoods
-          .filter((obj) => obj.category === catId)
-          .map((item, index) => (
-            <Good
-              isPress={isPress}
-              setIsPress={setIsPress}
-              setIdf={setIdf}
-              callback={(idt) => pullOut(idt)}
-              key={index}
-              good={...item}
-            />
-          ))
-      )
-    ) : ( // Якщо inputValued === false
-      (catId == 0) ? (
+    // inputValued ? ( 
+    //   (catId == 0) ? (
+    //     filtredGoods.map((item, index) => (
+    //       <Good
+    //         isPress={isPress}
+    //         setIsPress={setIsPress}
+    //         setIdf={setIdf}
+    //         callback2={(idd) => pullOut(idd)}
+    //         callback={(idt) => pullOut(idt)}
+    //         key={index}
+    //         good={...item}
+    //       />
+    //     ))
+    //   ) : (
+    //     filtredGoods
+    //       .filter((obj) => obj.category === catId)
+    //       .map((item, index) => (
+    //         <Good
+    //           isPress={isPress}
+    //           setIsPress={setIsPress}
+    //           setIdf={setIdf}
+    //           callback={(idt) => pullOut(idt)}
+    //           key={index}
+    //           good={...item}
+    //         />
+    //       ))
+    //   )
+    // ) : ( 
+      ((catId == 0) ? (
         currentGoods.map((item, index) => (
           <Good
             isPress={isPress}
