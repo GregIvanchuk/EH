@@ -48,8 +48,9 @@ scrollTo({ top: 0, behavior: 'smooth' }); // Вгору сторінки з пл
   return (
     <div className={styles.wrapper}>
       <Categor categories ={categories} catId={catId} OnclickCatIndex={(id) => dispatch(getCatId(id))}/>
-     {/* <div className={styles.goods}>
-     {
+     <div className={styles.goods}>
+     {goods.map((item,index) => <Good isPress={isPress} setIsPress={setIsPress} setIdf={setIdf} callback2={(idd)=> pullOut(idd)}  callback={(idt)=> pullOut(idt)} key={index}  good={...item}/>)}
+     {/* {
      isLoading ? <Image className={styles.loader} width={500} height={300} src="/Loading.gif" alt='gif'/>:
      inputValued ? 
     ( (catId == 0) ? 
@@ -62,8 +63,8 @@ scrollTo({ top: 0, behavior: 'smooth' }); // Вгору сторінки з пл
     goods.filter((obj => (obj.category === catId)))
   .map((item,index)=> <Good isPress={isPress} setIsPress={setIsPress} setIdf={setIdf}  callback={(idt)=> pullOut(idt)}  key={index}  good={...item}/>)
     )
-   }    
-     </div> */}
+   }     */}
+     </div>
      <ReactPaginate
           previousLabel={'←'}
           nextLabel={'→'}
