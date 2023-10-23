@@ -50,7 +50,7 @@ function Create(props) {
         const file = event.target.files[0];
         formData.append('image', file)
         const {data} = await axios.post("/upload", formData)
-        setImgUrl(`http://localhost:4444${data.url}`);
+        setImgUrl(`https://ehealthy-767d8856a732.herokuapp.com${data.url}`);
        
     } catch (error) {
       console.warn(error);
