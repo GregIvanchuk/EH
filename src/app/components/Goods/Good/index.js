@@ -1,4 +1,3 @@
-"use client"
 import Image from 'next/image'
 import styles from './Good.module.css'
 import { usePathname } from 'next/navigation'
