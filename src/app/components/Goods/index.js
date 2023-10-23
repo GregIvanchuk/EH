@@ -51,7 +51,7 @@ scrollTo({ top: 0, behavior: 'smooth' }); // Вгору сторінки з пл
       <div className={styles.goods}>
      
   {
-    isLoading ? <Image className={styles.loader} width={500} height={300} src="/Loading.gif" alt='gif'/>:
+    isLoading ? <Image className={styles.loader} width={500} height={300} src="/loading.gif" alt='gif'/>:
     inputValued ?
       ((catId == 0) ?
         filtredGoods.map((item,index) => <Good isPress={isPress} setIsPress={setIsPress} setIdf={setIdf} callback2={(idd)=> pullOut(idd)}  callback={(idt)=> pullOut(idt)} key={index}  good={item}/>):
