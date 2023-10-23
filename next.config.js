@@ -1,8 +1,7 @@
-/** @type {import('next').NextConfig} */
 const nextConfig = {
-    images: {
-              domains: ['localhost'], // Додайте інші хости, якщо потрібно
-            },
+  images: {
+    domains: ['localhost', 'ehealthy-767d8856a732.herokuapp.com'],
+  },
 }
-module.exports = nextConfig
 
+module.exports = nextConfig;

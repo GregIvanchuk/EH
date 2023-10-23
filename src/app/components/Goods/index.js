@@ -38,7 +38,7 @@ scrollTo({ top: 0, behavior: 'smooth' }); // Вгору сторінки з пл
   const startIndex = currentPage * goodsPerPage;
   const endIndex = startIndex + goodsPerPage;
   const currentGoods = goods.slice(startIndex, endIndex);
-  const filtredGoods = currentGoods.filter((item) =>
+  const filtredGoods = goods.filter((item) =>
     item.title.toLowerCase().includes(inputValued.toLowerCase())
          ) 
          console.log(filtredGoods);
