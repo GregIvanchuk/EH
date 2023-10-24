@@ -10,7 +10,7 @@ import { useSelector,useDispatch } from "react-redux";
 import { getCatId,setSelected } from "../../Redux/filterSlice";
 import { fetchGoods } from '@/app/Redux/goodsSlice';
 import ReactPaginate from 'react-paginate';
-export default function Goods() {
+export default function Goods({currentPage,setCurrentPage}) {
   const isLoading = useSelector(state => state.goods.status === 'loading');
   const dispatch = useDispatch()
   let [isPress, setIsPress,] = useState(false);
@@ -21,18 +21,15 @@ export default function Goods() {
   const pullOut = (idt) =>{
     setIdf(idt);
   }
-  const [currentPage, setCurrentPage] = useState(0); // Додайте стан для поточної сторінки
-  const goodsPerPage = 15; // Кількість товарів на одній сторінці
+ 
+  const goodsPerPage = 5; // Кількість товарів на одній сторінці
   const pullOutD = (idd) =>{
     setIdf(idd);
   }
   useEffect(() => {
     dispatch(fetchGoods())
   }, []);
-  useEffect(() => {
-scrollTo({ top: 0, behavior: 'smooth' }); // Вгору сторінки з плавністю
-  }, [currentPage]);
-  console.log(goods);
+  // console.log(goods);
   const categories = ["Bce","Протеїн","Гейнер","Креатин","Амінокислоти","Вітаміни","Омега-3","Інше"]
   const ar = [1,2,3,4,5,6,7,8]
   const startIndex = currentPage * goodsPerPage;
