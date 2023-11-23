@@ -22,7 +22,7 @@ export default function Goods({currentPage,setCurrentPage}) {
     setIdf(idt);
   }
  
-  const goodsPerPage = 5; // Кількість товарів на одній сторінці
+  const goodsPerPage = 20; // Кількість товарів на одній сторінці
   const pullOutD = (idd) =>{
     setIdf(idd);
   }
