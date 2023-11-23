@@ -11,7 +11,7 @@ import Cart from './cart/page'
 export default function Home() {
   const scrollRef = useRef(null);
   const [isLoading, setIsLoading] = useState(true); // Додано useState
-  const [currentPage, setCurrentPage] = useState(0); // Додайте стан для поточної сторінки
+  // const [currentPage, setCurrentPage] = useState(0); // Додайте стан для поточної сторінки
   const scrollToTop = () => {
     if (scrollRef.current) {
       scrollRef.current.scrollIntoView({ top:0, behavior: 'smooth' });
@@ -22,15 +22,15 @@ export default function Home() {
         setIsLoading(false);
       }, 500)
   },[])
-  useEffect(() => {
-    console.log('useEffect called with currentPage:', currentPage);
-    try {
-      scrollToTop();
-      console.log('scrollTo executed successfully');
-    } catch (error) {
-      console.error('Error in scrollTo:', error);
-    }
-  }, [currentPage]);
+  // useEffect(() => {
+  //   console.log('useEffect called with currentPage:', currentPage);
+  //   try {
+  //     scrollToTop();
+  //     console.log('scrollTo executed successfully');
+  //   } catch (error) {
+  //     console.error('Error in scrollTo:', error);
+  //   }
+  // }, [currentPage]);
   return (
     <main ref={scrollRef} className={styles.main}>
       { 
@@ -41,7 +41,7 @@ export default function Home() {
       <>
       <Header/>
      <Slider/>
-    <Goods currentPage={currentPage} setCurrentPage={setCurrentPage}/>
+    <Goods />
      <Footer/> 
      </>
     }

@@ -10,7 +10,7 @@ import { useSelector,useDispatch } from "react-redux";
 import { getCatId,setSelected } from "../../Redux/filterSlice";
 import { fetchGoods } from '@/app/Redux/goodsSlice';
 import ReactPaginate from 'react-paginate';
-export default function Goods({currentPage,setCurrentPage}) {
+export default function Goods({}) {
   const isLoading = useSelector(state => state.goods.status === 'loading');
   const dispatch = useDispatch()
   let [isPress, setIsPress,] = useState(false);
@@ -22,7 +22,7 @@ export default function Goods({currentPage,setCurrentPage}) {
     setIdf(idt);
   }
  
-  const goodsPerPage = 20; // Кількість товарів на одній сторінці
+  // const goodsPerPage = 20; // Кількість товарів на одній сторінці
   const pullOutD = (idd) =>{
     setIdf(idd);
   }
@@ -32,9 +32,9 @@ export default function Goods({currentPage,setCurrentPage}) {
   // console.log(goods);
   const categories = ["Bce","Протеїн","Гейнер","Креатин","Амінокислоти","Вітаміни","Омега-3","Інше"]
   const ar = [1,2,3,4,5,6,7,8]
-  const startIndex = currentPage * goodsPerPage;
-  const endIndex = startIndex + goodsPerPage;
-  const currentGoods = goods.slice(startIndex, endIndex);
+  // const startIndex = currentPage * goodsPerPage;
+  // const endIndex = startIndex + goodsPerPage;
+  // const currentGoods = goods.slice(startIndex, endIndex);
   const filtredGoods = goods.filter((item) =>
     item.title.toLowerCase().includes(inputValued.toLowerCase())
          ) 
@@ -56,13 +56,13 @@ export default function Goods({currentPage,setCurrentPage}) {
           .map((item,index)=> <Good isPress={isPress} setIsPress={setIsPress} setIdf={setIdf}  callback={(idt)=> pullOut(idt)}  key={index}  good={item}/>)
       ):
       ((catId == 0) ?
-        currentGoods.map((item,index) => <Good isPress={isPress} setIsPress={setIsPress} setIdf={setIdf} callback2={(idd)=> pullOut(idd)}  callback={(idt)=> pullOut(idt)} key={index}  good={item}/>):
+        goods.map((item,index) => <Good isPress={isPress} setIsPress={setIsPress} setIdf={setIdf} callback2={(idd)=> pullOut(idd)}  callback={(idt)=> pullOut(idt)} key={index}  good={item}/>):
         goods.filter((obj => (obj.category === catId)))
         .map((item,index)=> <Good isPress={isPress} setIsPress={setIsPress} setIdf={setIdf}  callback={(idt)=> pullOut(idt)}  key={index}  good={item}/>)
       )
   }
 </div>
-     <ReactPaginate
+     {/* <ReactPaginate
           previousLabel={'←'}
           nextLabel={'→'}
           breakLabel={'...'}
@@ -72,7 +72,7 @@ export default function Goods({currentPage,setCurrentPage}) {
           onPageChange={handlePageClick}
           containerClassName={styles.pagination}
           activeClassName={styles.active}
-        />
+        /> */}
      {isPress ?
      <Description isPress={isPress} setIsPress={setIsPress}  good = {goods.find(obj => obj._id == idf)} /> : null
       }
